@@ -7,10 +7,10 @@ Use this worksheet to review and reinforce your understanding of Python data con
 ## 🧠 Section 1: Lists
 
 1. What method adds an item to the end of a list?  
-   `Answer:` ____________________________
+   `Answer:` `append()`
 
 2. How can you remove an item from a list by value?  
-   `Answer:` ____________________________
+   `Answer:` `remove()`
 
 3. What’s the result of this code?
 
@@ -20,7 +20,7 @@ nums.append(8)
 print(nums)
 ```
 
-   `Answer:` ____________________________
+   `Answer:` `[2, 4, 6, 8]`
 
 ---
 
@@ -30,6 +30,12 @@ print(nums)
 # Create a list of your top 3 favorite foods.
 # Add another food to the list.
 # Remove one item and print the list.
+
+foods = ["MacNCheese","Steak","Protein Bars"]
+foods.append("Yogurt")
+foods.remove("MacNCheese")
+
+print(foods)
 ```
 
 ---
@@ -37,10 +43,10 @@ print(nums)
 ## 🔒 Section 2: Tuples
 
 4. What is a key difference between a list and a tuple?  
-   `Answer:` ____________________________
+   `Answer:` A list is mutable while a tuple is immutable
 
 5. Can you change the contents of a tuple once it is created? Why or why not?  
-   `Answer:` ____________________________
+   `Answer:` No you cannot, by definition, tuples are immutable. You must overwrite the previous one entirely to change its contents.
 
 ---
 
@@ -49,17 +55,24 @@ print(nums)
 ```python
 # Create a tuple with your favorite 3 numbers.
 # Unpack it into three variables and print each.
+
+t = (5, 21, 25)
+fav1 = t[0]
+fav2 = t[1]
+fav3 = t[2]
+
 ```
+
 
 ---
 
 ## 🔑 Section 3: Dictionaries
 
 6. What does the `.get()` method do differently from accessing a key directly?  
-   `Answer:` ____________________________
+   `Answer:` It has a failsafe option to return a value in the case the key doesn't exist.
 
 7. How do you loop through both keys and values in a dictionary?  
-   `Answer:` ____________________________
+   `Answer:` using the `items()` function
 
 ---
 
@@ -68,12 +81,22 @@ print(nums)
 ```python
 # Create a dictionary with keys: 'name', 'age', and 'hobby'.
 # Print each key and value in the format "key: value".
+
+d = {
+   'name': 'Rykir',
+   'age': 21,
+   'hobby': 'Coding'
+}
+
+for thing in d.items():
+   print(thing)
+
 ```
 
 ---
 
 ## 🧾 Submit Checklist
 
-- [ ] I practiced creating and modifying lists.
-- [ ] I understand how tuples are different from lists.
-- [ ] I accessed and looped through dictionary items.
+- [X] I practiced creating and modifying lists.
+- [X] I understand how tuples are different from lists.
+- [X] I accessed and looped through dictionary items.
